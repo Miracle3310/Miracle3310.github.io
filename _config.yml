@@ -99,11 +99,11 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  # repo: git@github.com:Miracle3310/Miracle3310.github.io.git
-  repo: https://github.com/Miracle3310/Miracle3310.github.io.git
+  repo: git@github.com:Miracle3310/Miracle3310.github.io.git
+  # repo: https://github.com/Miracle3310/Miracle3310.github.io.git
   branch: hexo
   extend_dirs: /
-  ignore_hidden: false
+  ignore_hidden: true
   ignore_pattern: 
     public: .
 - type: git
