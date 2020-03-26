@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>hexo的坑 | Miracle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="主要记录了利用hexo搭建博客遇到的各种问题，尝试给出解决办法，但是往往因为没法复现搁置了。挖坑以后再补。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo的坑">
+<meta property="og:url" content="http://yoursite.com/2020/03/20/hexo%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:site_name" content="Miracle">
+<meta property="og:description" content="主要记录了利用hexo搭建博客遇到的各种问题，尝试给出解决办法，但是往往因为没法复现搁置了。挖坑以后再补。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/03/20/hexo%E7%9A%84%E5%9D%91/hexo%E7%9A%84%E5%9D%91/kyaru.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/22/8ITfIO.png">
+<meta property="article:published_time" content="2020-03-19T18:21:39.000Z">
+<meta property="article:modified_time" content="2020-03-22T14:18:35.507Z">
+<meta property="article:author" content="Miracle">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/20/hexo%E7%9A%84%E5%9D%91/hexo%E7%9A%84%E5%9D%91/kyaru.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Miracle" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Miracle</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/20/hexo%E7%9A%84%E5%9D%91/" class="article-date">
+  <time datetime="2020-03-19T18:21:39.000Z" itemprop="datePublished">2020-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo的坑
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要记录了利用hexo搭建博客遇到的各种问题，尝试给出解决办法，但是往往因为没法复现搁置了。挖坑以后再补。</p>
+<a id="more"></a>
+<h2 id="Github同步"><a href="#Github同步" class="headerlink" title="Github同步"></a>Github同步</h2><p>hexo自带的<code>hexo d</code>能将本地文件上传到github上，然后实现网页更新。但是上传的其实是输入<code>hexo d</code>后生成的 <strong>/.deploy_git</strong>文件夹，整个源文件并没有上传到github。这就导致未来多设备更新网页的不便。一个常见的解决办法是新建分支，利用git将源文件保存到新分支上（将整个项目当成普通工程用git来管理）。不过这就意味着每次<code>hexo d</code>后都要再做一遍<code>git push</code>的操作，才能达到备份的效果，有点不够直接。知乎上的<a href="https://www.zhihu.com/question/21193762/answer/172097576" target="_blank" rel="noopener">这个回答</a>非常简单的解决了同步的功能。</p>
+<p>不过这个回答的细节没有写得很清楚，还是让silly me折腾了一会儿。关键在于：按照他的方法上传后，其实从我们新建的那个库就可以直接重现网页。</p>
+<p>首先在github上设置新增的分支为默认分支。然后假设我们在一台新电脑上，想要修改网页。那么在工作文件夹目录下输入</p>
+<pre><code>git clone yourRepositoryURL </code></pre><p>然后输入</p>
+<pre><code>npm install (大概是这个吧)</code></pre><p>（不要使用<code>hexo init</code>，那样会生成新的config_yml文件。）然后再试试<code>hexo d</code>，现在应该能成功上传了。这就说明我们已经可以在这台新设备上开始干活了！</p>
+<p>如果上传报错的话，玄学的办法是删除deploy_git文件夹以及改一改comfig_yml文件里面deploy的参数，不知道为什么突然就好了，有待进一步研究。<del>其实是不想再花时间研究这个劳什子玩意儿了。</del></p>
+<h2 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h2><p>这个其实很简单，网上方法也写得很多。生成ssh公钥填到github网站上，config.yml文件里deploy设置里的repo用ssh URL。其他就没啥问题了。</p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>这是使用绝对路径插入的图片。</p>
+<pre><code>![](hexo的坑/kyaru.png)</code></pre><p><img src="hexo%E7%9A%84%E5%9D%91/kyaru.png" alt=""></p>
+<p>这是使用标签语法插入的图片。</p>
+<pre><code>{% asset_img hexo的坑/kyaru.png This is an image %}</code></pre>
+
+<p>这是使用图床插入的图片。</p>
+<pre><code>![](https://s1.ax1x.com/2020/03/22/8ITfIO.png)</code></pre><p><img src="https://s1.ax1x.com/2020/03/22/8ITfIO.png" alt=""></p>
+<p>图床链接：<br><a href="https://imgchr.com/i/8ITfIO" target="_blank" rel="noopener">https://imgchr.com/i/8ITfIO</a></p>
+<p>插入图片试验了base64（太长；不显示），本地图片插入（不显示），最后还是屈服于网络图床。关于本地图片直接插入，这里有个写的<a href="https://myfavs.win/2019/08/08/%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91/" target="_blank" rel="noopener">挺好的博客</a>，可惜我按它说的做还是没效果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/20/hexo%E7%9A%84%E5%9D%91/" data-id="ck87odvzq0003fsv64y1s1tsz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          做个键盘
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/">做个键盘</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/20/hexo%E7%9A%84%E5%9D%91/">hexo的坑</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/20/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Miracle<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
