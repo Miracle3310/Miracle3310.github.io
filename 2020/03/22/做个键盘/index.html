@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>做个键盘 | Miracle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="挖个坑。打算从头开始造个键盘。起因是觉得帅，然后是想省钱，接着想加点黑科技。至于什么时候完成待定。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做个键盘">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/index.html">
+<meta property="og:site_name" content="Miracle">
+<meta property="og:description" content="挖个坑。打算从头开始造个键盘。起因是觉得帅，然后是想省钱，接着想加点黑科技。至于什么时候完成待定。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/26/G9VU1g.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/G94Mxs.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SethSenpai/Tanuki/master/Img/glamour1.jpg">
+<meta property="article:published_time" content="2020-03-22T14:36:27.000Z">
+<meta property="article:modified_time" content="2020-04-11T01:40:01.561Z">
+<meta property="article:author" content="Miracle">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/26/G9VU1g.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Miracle" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Miracle</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-做个键盘" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/" class="article-date">
+  <time datetime="2020-03-22T14:36:27.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      做个键盘
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>挖个坑。打算从头开始造个键盘。起因是觉得帅，然后是想省钱，接着想加点黑科技。至于什么时候完成待定。</p>
+<a id="more"></a>
+
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>最终希望做成的版本</p>
+<ul>
+<li>40%，便携</li>
+<li>低延迟</li>
+<li>可无线</li>
+<li>自定义灯光</li>
+<li>侧边按键</li>
+<li>滚轮</li>
+<li>LED显示屏</li>
+</ul>
+<h3 id="ver1-0"><a href="#ver1-0" class="headerlink" title="ver1.0"></a>ver1.0</h3><p>先做个能用的40%键盘</p>
+<ul>
+<li>有线</li>
+<li>全键无冲</li>
+<li>尽量低延迟</li>
+<li>考虑热插拔</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.zhihu.com/question/35172314/answer/710111348" target="_blank" rel="noopener">请教如何DIY机械键盘? - WolfMark狼印的回答 - 知乎</a></p>
+<p><a href="https://github.com/yangzigy/yz_keyboard" target="_blank" rel="noopener">一个记录制作键盘资料的github库</a></p>
+<p><a href="https://www.bysb.net/3663.html" target="_blank" rel="noopener">手柄君的SimPad</a></p>
+<p><a href="https://post.smzdm.com/p/498050/" target="_blank" rel="noopener">详细介绍了总体流程，也许有点用</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/41285686" target="_blank" rel="noopener">整个写的很细</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/79114621" target="_blank" rel="noopener">更详细的专栏，主要的参考资料之一，惊为天人的制作</a></p>
+<p><a href="https://github.com/help-14/mechanical-keyboard" target="_blank" rel="noopener">汇聚了无数diy键盘的库，我抄爆！</a></p>
+<h2 id="制造流程与思路"><a href="#制造流程与思路" class="headerlink" title="制造流程与思路"></a>制造流程与思路</h2><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>配列<ul>
+<li>设计键盘配列</li>
+<li>生成定位板图</li>
+<li>细化设计图，轴孔、边框</li>
+<li>淘宝制作定位板</li>
+</ul>
+</li>
+<li>主控<ul>
+<li>调研、购买单片机</li>
+<li>学习如何编写、魔改固件</li>
+<li>调试主控</li>
+</ul>
+</li>
+<li>PCB板<ul>
+<li>根据主控端口特性连线</li>
+<li>导出，淘宝打样</li>
+</ul>
+</li>
+<li>组装</li>
+</ul>
+<h3 id="键盘构造"><a href="#键盘构造" class="headerlink" title="键盘构造"></a>键盘构造</h3><p>一个键盘核心的构造是轴，PCB板和主控。<br>轴就是开关。PCB板就是导线，连接开关与主控。<br>主控，也就是一块单片机，负责处理经过导线传来的开关信号，然后传入电脑，电脑就知道这是按下了哪几个键。</p>
+<p>下面是维基百科的介绍：</p>
+<ul>
+<li><p>固件，是一种嵌入在硬件设备中的软件。通常它是位于特殊应用集成电路或可编程逻辑器件之中的闪存或EEPROM或PROM里，有的可以让用户更新。可以应用在非常广泛的电子产品中，从遥控器、计算器到电脑中的键盘、硬盘，甚至工业机器人中都可见到它的身影。 顾名思义，固件的所在是位于软件和硬件之间的。</p>
+</li>
+<li><p>单片机，全称单片微型计算机，又称微控制器，是把中央处理器、存储器、定时/计数器、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人电脑中的通用型微处理器相比，它更强调自供应和节约成本。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单，功能较低。</p>
+</li>
+</ul>
+<p>不同单片机有不同的功能，可能也会影响固件的写法。固件写在单片机里，定义了每个开关的意义。也就是说改变固件里的定义，就改变了键盘的键位设置。由于有一些现成的固件，我个人是打算直接用加魔改。</p>
+<p>先把主控弄好。主控的处理可以独立与导线与开关，人工短路一部分端口应该是一样的效果吧。然后根据主控端口的定义绘制PCB板，后面就没电子电路的事了。</p>
+<p>突然发现github上有许多前辈铺就好的道路，包括pcb设计和固件一应俱全。那就直接借鉴看看。【【</p>
+<h3 id="成本分析"><a href="#成本分析" class="headerlink" title="成本分析"></a>成本分析</h3><ul>
+<li>PCB板</li>
+<li>轴</li>
+<li>键帽</li>
+<li>外壳</li>
+<li>单片机</li>
+</ul>
+<h2 id="配列"><a href="#配列" class="headerlink" title="配列"></a>配列</h2><!-- 40%键盘的标准配列（？） -->
+<!-- https://imgchr.com/i/8OumIe -->
+<!-- https://imgchr.com/i/8O8LH1 -->
+<!-- https://imgchr.com/i/GSbKwq -->
+<!-- https://imgchr.com/i/GSbMT0 -->
+<!-- ![](https://s1.ax1x.com/2020/03/26/GSbKwq.jpg )
+
+![](https://s1.ax1x.com/2020/03/26/GSbMT0.jpg)
+
+<center>40%键盘的示例（来自淘宝 KBDfans客制化NIU40）</center> -->
+
+<p>其实每个键干什么用应该可以后期刷固件来改变，这里的关键是确定键盘各个键位的排布、大小。因为是第一次制作，而且对各种快捷键也不熟悉，这里打算直接照搬上图配列设计。</p>
+<p><a href="http://www.keyboard-layout-editor.com/" target="_blank" rel="noopener">http://www.keyboard-layout-editor.com/</a></p>
+<p>上面网址在<code>Preset</code>里选择<code>Planck</code>。<br>选择Raw data复制。</p>
+<pre><code>&lt;!-- [{a:7},&quot;Tab&quot;,&quot;Q&quot;,&quot;W&quot;,&quot;E&quot;,&quot;R&quot;,&quot;T&quot;,&quot;Y&quot;,&quot;U&quot;,&quot;I&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Back Space&quot;],
+[&quot;Esc&quot;,&quot;A&quot;,&quot;S&quot;,&quot;D&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;;&quot;,&quot;&apos;&quot;],
+[&quot;Shift&quot;,&quot;Z&quot;,&quot;X&quot;,&quot;C&quot;,&quot;V&quot;,&quot;B&quot;,&quot;N&quot;,&quot;M&quot;,&quot;,&quot;,&quot;.&quot;,&quot;/&quot;,&quot;Return&quot;],
+[&quot;&quot;,&quot;Ctrl&quot;,&quot;Alt&quot;,&quot;Super&quot;,{w:4},&quot;&quot;,&quot;&amp;larr;&quot;,&quot;&amp;darr;&quot;,&quot;&amp;uarr;&quot;,&quot;&amp;rarr;&quot;] --&gt;</code></pre><h2 id="生成定位板"><a href="#生成定位板" class="headerlink" title="生成定位板"></a>生成定位板</h2><p><a href="http://builder.swillkb.com/" target="_blank" rel="noopener">http://builder.swillkb.com/</a></p>
+<p>这是生成矢量图的。</p>
+<p>上面Raw data复制进<code>Plate Layout</code>，参数根据自己需要设置一下。</p>
+<h2 id="固件"><a href="#固件" class="headerlink" title="固件"></a>固件</h2><p><a href="https://kbfirmware.com/" target="_blank" rel="noopener">https://kbfirmware.com/</a></p>
+<p>这是用来自动生成固件并且告诉你怎么连线的。</p>
+<p>同样是kle网站的Raw data复制进来导入。然后可以自己改改，直接导出.hex文件烧录进主控。</p>
+<h2 id="PCB板"><a href="#PCB板" class="headerlink" title="PCB板"></a>PCB板</h2><p>看了看参考资料里面写的，有许多是直接飞线不用PCB的方案。感觉也挺不错的，不过大概还是想自己画一个PCB板看看。再议。</p>
+<h2 id="Planck-Through-Hole-Kit"><a href="#Planck-Through-Hole-Kit" class="headerlink" title="Planck Through Hole Kit"></a>Planck Through Hole Kit</h2><!-- https://imgchr.com/i/G9VU1g -->
+<p><img src="https://s1.ax1x.com/2020/03/26/G9VU1g.jpg" alt=""><br><a href="https://github.com/olkb/planck_thk" target="_blank" rel="noopener">https://github.com/olkb/planck_thk</a></p>
+<p>一个看上去很帅的键盘，于是打算先抄一份看看。</p>
+<p>GERBER是指PCB制板文件，BOM是元件清单，包括规格型号，用量等等。</p>
+<h2 id="Plaid"><a href="#Plaid" class="headerlink" title="Plaid"></a>Plaid</h2><p><a href="https://github.com/hsgw/plaid" target="_blank" rel="noopener">https://github.com/hsgw/plaid</a></p>
+<!-- https://imgchr.com/i/G94Mxs -->
+<p><img src="https://s1.ax1x.com/2020/03/27/G94Mxs.png" alt=""></p>
+<!-- <center>Plaid样例</center> -->
+
+
+<!-- https://imgchr.com/i/G94nPg -->
+<!-- ![](https://s1.ax1x.com/2020/03/27/G94nPg.png)
+<center>Plaid采购元件表</center> -->
+
+<p>这个键盘的github库里有pcb板和文档说明，感觉已经比较详细了。</p>
+<h2 id="Tanuki"><a href="#Tanuki" class="headerlink" title="Tanuki"></a>Tanuki</h2><p><a href="https://github.com/SethSenpai/Tanuki" target="_blank" rel="noopener">https://github.com/SethSenpai/Tanuki</a></p>
+<p><img src="https://raw.githubusercontent.com/SethSenpai/Tanuki/master/Img/glamour1.jpg" alt=""></p>
+<p>这个文档写得更细了。不过不是矩阵式排列，但这没所谓！总之看上去也是挺不错的。</p>
+<p>按照他写的文档来看，我把整个过程可以分为以下几个步骤：</p>
+<ol>
+<li>测试单片机</li>
+<li>打印PCB板和外壳</li>
+<li>购买元件</li>
+<li>组装<ol>
+<li>焊接顺序在文档里写了</li>
+<li>但是好像不能先把单片机焊上去吧。【【</li>
+</ol>
+</li>
+</ol>
+<h3 id="打印PCB"><a href="#打印PCB" class="headerlink" title="打印PCB"></a>打印PCB</h3><p>找个淘宝店家把zip文件扔给他。阻焊颜色白符号颜色黑。5片起做报价203。4-5天交货。</p>
+<h3 id="外壳"><a href="#外壳" class="headerlink" title="外壳"></a>外壳</h3><p>找个淘宝店家把stl文件扔给他。2件报价125。</p>
+<p>底壳打算亚克力切割，还没找好。</p>
+<h3 id="元件"><a href="#元件" class="headerlink" title="元件"></a>元件</h3><p>其实就淘宝上直接搜元件就可以了，尽量凑一家店里买包邮，实在不行就多掏点邮费呗。买的时候最好多买一点，不会贵多少就怕店家少寄了，，</p>
+<p>不过好在不贵，这把键盘的元件要求也很少，唯一别扭的是mini USB接口，感觉已经非常过时了，但是这次就先按他的来吧。</p>
+<p>应该除了轴和螺栓螺母之类的都好了。</p>
+<h3 id="QMK"><a href="#QMK" class="headerlink" title="QMK"></a>QMK</h3><p><a href="https://docs.qmk.fm/#/" target="_blank" rel="noopener">https://docs.qmk.fm/#/</a></p>
+<p>QMK固件介绍网址，根据这个来好好学习怎么写固件吧！</p>
+<h3 id="组装"><a href="#组装" class="headerlink" title="组装"></a>组装</h3><p>这周所有的东西都到齐了，晚上就直接开始组装。按照上面的说明一步步来。贴片元件的焊接真的麻烦。吸了一晚上焊锡还饿了。</p>
+<p>二极管没有太大的问题，就是慢。</p>
+<p>LEDd没有买好，下次再焊。</p>
+<p>轴的焊接注意轴不要被顶出来，因为轴主要是靠外壳卡住来固定的，但是这个肯定不是很紧，最终要靠焊接的力量。<br>那在焊接之前就要好好压着了。</p>
+<p>我混用了G黄和蒂芙尼，不知道最后效果如何。</p>
+<p>主控的焊接可能是最麻烦的，因为作者的方案其实有那么点谔谔，，，现在mini USB接口用的真的很少的。<br>然后原作者还是用剪短一根数据线的做法实现端口转移的，<br>我当然不舍得了，采用的办法是自己做了根数据线，，<br>，这个焊接废了九牛二虎之力，好在最终焊上了。不过短路和断路的风险不是一般的大，，线的长度也比较随性，好在最后是能用了。</p>
+<p>之后几乎就没有焊接的事，把买来的10块钱地摊键帽安上去（好难按，想买点好的，，），连到电脑上，竟然所有键位全都有响应，感动了。</p>
+<p>现在还差的就是底壳和LED了。底壳还有点麻烦因为我不知道螺栓螺母怎么搞比较便宜，，（LED其实也是，原作者的型号太难便宜地买了）</p>
+<p>后面就可以到研究固件的环节了。剩下来的物料大概还能做第二把（除了主控和二极管等等要再买） <del>说起二极管这个店家直接给我少寄了一半，差点不够用，，</del></p>
+<p>尝试改了一下键位，没有什么太大的问题，跟着QMK的教程来就行了。就是烧制的时候要连按两下reset按钮才能进入dfu模式，不成功就多试几次。</p>
+<p>看了看延迟，有个叫去抖的时间我直接从5改成0了，感觉没啥差别。这个键盘已经挺快的。<br>之后看了看默认的去抖算法，有点艰深，毕竟我已经根本不会C了。【【<br>总体来说延迟已经比3108好上太多，轴体的感觉也挺好，键位也很容易适应。</p>
+<p>新的键帽和led到了，装上去后感觉更猛。首先led很亮，自带的灯光效果也还算不错，也许之后可以想想有没有办法接着改进。（当然比较可惜的这个键盘没有给每个轴体设置led）<br>键帽还算好看。我买的是DSA高度的，和这个外壳比较匹配的白色。led的光也能透过。不过店家给我少寄了一个空格键，我就索性接着补几个1.25x宽的了。<br>这个键帽拿来打osu也挺好，按下去挺干脆的。虽然不便宜但还挺值的。</p>
+<p>之后就剩个底盘了。这个3d打印的外壳的孔没有打通，有点难办，想了挺多感觉没一个更合适的办法。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>键盘的组装没有太大的问题。现在主要是键帽不顺手，打字不流畅，没有熟悉键位的设置。应该问题不大。</p>
+<p>打算稍微改几个键位，之后的重点就是固件的编写了。</p>
+<p>打了一天osu，感觉本身的延迟已经比3108低了，只是键盘太滑又要使用左手纯鼠大法，，，</p>
+<p>事实上最后还是花了很多钱。主要花费在外壳材料工具上，如果在学校的话就能白嫖激光切割和3d打印和螺丝和胶水和电焊等一系列贵得要死的东西了。买材料也是不得不多买许多，如果再做一套一样的会便宜很多。</p>
+<h3 id="更抽象的总结"><a href="#更抽象的总结" class="headerlink" title="更抽象的总结"></a>更抽象的总结</h3><ol>
+<li>要做就要争取一步到位，第一个样品就要争取最好。</li>
+<li>广泛而深入地调研能有效提高效率。</li>
+<li>虽说要货比三家，时间也是很宝贵的。</li>
+</ol>
+<h3 id="成本"><a href="#成本" class="headerlink" title="成本"></a>成本</h3><table>
+<thead>
+<tr>
+<th>物品</th>
+<th>数量</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>底盘（磨砂亚克力板）</td>
+<td>2</td>
+<td>78.4</td>
+</tr>
+<tr>
+<td>强力胶</td>
+<td></td>
+<td>11.55</td>
+</tr>
+<tr>
+<td>螺丝螺母</td>
+<td></td>
+<td>10.09</td>
+</tr>
+<tr>
+<td>防滑贴</td>
+<td></td>
+<td>7.57</td>
+</tr>
+<tr>
+<td>键帽+收纳包</td>
+<td></td>
+<td>36.26+92.02</td>
+</tr>
+<tr>
+<td>LED</td>
+<td>20</td>
+<td>9.8</td>
+</tr>
+<tr>
+<td>轴+数据线</td>
+<td></td>
+<td>110.65</td>
+</tr>
+<tr>
+<td>电子器件</td>
+<td></td>
+<td>58.17</td>
+</tr>
+<tr>
+<td>3d打印外壳</td>
+<td>2</td>
+<td>124.6</td>
+</tr>
+<tr>
+<td>PCB</td>
+<td>5</td>
+<td>203</td>
+</tr>
+<tr>
+<td>芯片+面包板等没用上的东西</td>
+<td>1</td>
+<td>74.37</td>
+</tr>
+<tr>
+<td>没用上的键帽</td>
+<td></td>
+<td>10</td>
+</tr>
+<tr>
+<td>合计</td>
+<td></td>
+<td>816.39</td>
+</tr>
+</tbody></table>
+<h2 id="关于延迟"><a href="#关于延迟" class="headerlink" title="关于延迟"></a>关于延迟</h2><h3 id="延迟来源"><a href="#延迟来源" class="headerlink" title="延迟来源"></a>延迟来源</h3><p>和手柄君交流了一下，最大的来源果然还是去抖的处理。固件里面关于去抖算法的实现又是最为关键的。</p>
+<h3 id="测试延迟"><a href="#测试延迟" class="headerlink" title="测试延迟"></a>测试延迟</h3><p>如何测试延迟是一个很难的问题。<br>电脑获取键盘信息并且记录时间可以编程实现。<br>关键是如何抢在主控之前主控之前获得按键信号并显示出时间来。</p>
+<p>一些思路：</p>
+<ol>
+<li>示波器检测按键信号。可能比较方便，但是关键在于示波器本身的延迟有多大。</li>
+<li>从按键电路引出一个检测电路，一旦检测到按键信号可以立刻输出时间。</li>
+<li>从电脑拉出一个控制按键短路的控制电路，精确地控制按下的时间。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/" data-id="ck87odvze0002fsv621z3cbui" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/20/hexo%E7%9A%84%E5%9D%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo的坑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/22/%E5%81%9A%E4%B8%AA%E9%94%AE%E7%9B%98/">做个键盘</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/20/hexo%E7%9A%84%E5%9D%91/">hexo的坑</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/20/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Miracle<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
